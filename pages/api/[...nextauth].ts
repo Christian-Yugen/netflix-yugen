@@ -1,6 +1,6 @@
 import NextAuth from 'next-auth';
 import Credentials from 'nex-auth/providers/credentials';
-import { comare } from 'bcrypt';
+import { compare } from 'bcrypt';
 
 import prismadb from '@/lib/prismadb';
 
@@ -9,7 +9,7 @@ export default NextAuth ({
         Credentials({
             id: 'credentials',
             name: Credentials,
-            creentials: {
+            credentials: {
                 email: {
                     label: 'Email',
                     type: 'text',
@@ -35,7 +35,7 @@ export default NextAuth ({
                 }
 
                 const isCorrectPassword = await compare(
-                    credenteials.password,
+                    credentials.password,
                     user.hashePassword
                 );
 
