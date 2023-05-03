@@ -40,9 +40,22 @@ export default NextAuth ({
                 );
 
                 if (!isCorrectPassword) {
-                    throw new Error()
+                    throw new Error('Incorrect password');
                 }
+
+                return user;
             }
         })
-    ]
-})
+    ],
+    pages: {
+        signIn: '/auth',
+    },
+    debug: process.ev.NODE_ENV === 'development',
+    session: {
+        strategy: 'jwt',
+    },
+    jwt: {
+        secret: process.env.NEXTAUTH_JWT_SECRET
+    },
+    secret: process.env.NEXTAUTH_SECRET,
+});

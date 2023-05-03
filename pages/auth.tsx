@@ -1,3 +1,4 @@
+import  axios from 'axios';
 import { useCallback, useState } from "react";
 import Input from "@/components/Input";
 
@@ -11,6 +12,10 @@ const Auth = () => {
     const toggleVariant = useCallback(() => {
         setVariant((currentVariant) => currentVariant === 'login' ? 'register' : 'login');
     }, []);
+
+    const register = useCallback(async() => {
+        
+    }, [])
 
     return (
         <div className="relative h-full w-full bg-[url('/images/br-pt-20230417.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
