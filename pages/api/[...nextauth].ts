@@ -40,7 +40,7 @@ export default NextAuth ({
                 );
 
                 if (!isCorrectPassword) {
-                    throw new Error('Incorrect password');
+                    throw new Error('Senha Incorreta');
                 }
 
                 return user;
@@ -50,7 +50,7 @@ export default NextAuth ({
     pages: {
         signIn: '/auth',
     },
-    debug: process.ev.NODE_ENV === 'development',
+    debug: process.env.NODE_ENV === 'development',
     session: {
         strategy: 'jwt',
     },
