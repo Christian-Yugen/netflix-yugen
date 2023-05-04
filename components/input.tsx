@@ -17,7 +17,10 @@ const Input: React.FC<InputProps> = ({
 }) => {
     return (
         <div className="relative">
-        <input 
+        <input
+            onChange={onChange} 
+            value={value}
+            type={type}
             id={id}
             className="
                 block
@@ -30,13 +33,15 @@ const Input: React.FC<InputProps> = ({
                 text-white
                 bg-neutral-700
                 appearance-none
+                focus:outline-none
                 focus:ring-0
                 peer
          "
          placeholder=" "
         />
-        <label 
-        className="
+        <label
+            htmlFor={id}
+            className="
             absolute
             text-md
             text-zinc-400
@@ -53,11 +58,11 @@ const Input: React.FC<InputProps> = ({
             peer-focus:scale-75
             peer-focus:-translate-y-3
         " 
-        htmlFor={id}>
-            {label}
+        >
+        {label}
         </label>
         </div>
-    );
+    )
 }
 
 export default Input;
