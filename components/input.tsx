@@ -36,9 +36,11 @@ const Input: React.FC<InputProps> = ({
                 focus:outline-none
                 focus:ring-0
                 peer
-         "
-         placeholder=" "
+                invalid: border-b-1
+            "
+            placeholder=" "
         />
+        
         <label
             htmlFor={id}
             className="
