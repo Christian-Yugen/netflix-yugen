@@ -1,13 +1,13 @@
 import  axios from 'axios';
 import { useCallback, useState } from "react";
-import Input from "@/components/Input";
+import Input from "@/components/input";
 
 const Auth = () => {
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
     const [password, setPassword] = useState('');
 
-    const [ variant, setVariant] = useState('login');
+    const [variant, setVariant] = useState('login');
 
     const toggleVariant = useCallback(() => {
         setVariant((currentVariant) => currentVariant === 'login' ? 'register' : 'login');
@@ -20,6 +20,7 @@ const Auth = () => {
                 name,
                 password
             });
+            
         } catch (error) {
             console.log(error);
         }
