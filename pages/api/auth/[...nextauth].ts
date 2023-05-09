@@ -1,7 +1,6 @@
 import NextAuth from 'next-auth';
 import Credentials from 'next-auth/providers/credentials';
 import { compare } from 'bcrypt';
-
 import prismadb from '@/lib/prismadb';
 
 export default NextAuth ({
@@ -30,13 +29,13 @@ export default NextAuth ({
                     }
                 });
 
-                if (!User || !User.hashedPassword) {
+                if (!user || !user.hashedPassword) {
                     throw new Error('Email não cadastrado');
                 }
 
                 const isCorrectPassword = await compare(
                     credentials.password,
-                    user.hashePassword
+                    user.hashedPassword
                 );
 
                 if (!isCorrectPassword) {
