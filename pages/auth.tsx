@@ -5,6 +5,7 @@ import { signIn } from 'next-auth/react';
 import { useRouter } from 'next/router';
 import { FcGoogle } from 'react-icons/fc';
 import { FaGithub } from 'react-icons/fa';
+import Image from 'next/image';
 
 const Auth = () => {
     const router = useRouter();
@@ -51,7 +52,7 @@ const Auth = () => {
         <div className="relative h-full w-full bg-[url('/images/br-pt-20230417.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
             <div className="bg-black w-full h-full lg:bg-opacity-50">
                 <nav className="px-12 py-5">
-                    <img src="/images/netflix_Logo_RGB.png" alt="Logo" className="h-16" />
+                    <Image src="/images/netflix_Logo_RGB.png" alt="Logo" className="h-16" />
                 </nav>
                 <div className="flex justify-center">
                     <div className="bg-black bg-opacity-70 px-16 py-16 self-center mt-2 lg:w-2/5 lg:max-w-md rounded-md w-full">
@@ -86,7 +87,9 @@ const Auth = () => {
                             {variant === 'login' ? 'Login' : 'Entrar'}
                         </button>
                         <div className="flex flex-row items-center gap-4 mt-8 justify-center">
-                            <div className="
+                            <div 
+                            onClick={() => signIn('google', { callbackUrl: '/' })}
+                            className="
                                 w-10
                                 h-10
                                 bg-white
@@ -95,15 +98,14 @@ const Auth = () => {
                                 items-center
                                 justify-center
                                 cursor-pointer
-                                houver:opacity-80
+                                hover:opacity-80
                                 transition
                                 ">
                             <FcGoogle size={30} />
-                            </div>
-                        </div>
-
-                        <div className="flex flex-row items-center gap-4 mt-8 justify-center">
-                            <div className="
+                            </div>       
+                            <div 
+                            onClick={() => signIn('github', { callbackUrl: '/' })}
+                            className="
                                 w-10
                                 h-10
                                 bg-white
@@ -112,7 +114,7 @@ const Auth = () => {
                                 items-center
                                 justify-center
                                 cursor-pointer
-                                houver:opacity-80
+                                hover:opacity-80
                                 transition
                                 ">
                             <FaGithub size={30} />
