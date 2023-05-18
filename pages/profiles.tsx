@@ -1,6 +1,6 @@
-import { NextPageContext } from "next";
+import { NextPageContext } from 'next';
 
-export async function getSErverSideProps(context: NextPageContext) {
+export async function getServerSideProps(context: NextPageContext) {
     const session = await getSession(context);
 
     if (!session) {
