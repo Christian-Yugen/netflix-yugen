@@ -1,0 +1,11 @@
+{
+    "cSpell.words": [
+        "correções"
+    ],
+    "workbench.tree.indent": 4,
+    "screencastMode.mouseIndicatorSize": 20,
+    "problems.showCurrentInStatus": true,
+    "easycode.model": "gpt-4",
+    "prettier.tabWidth": 2,
+    "scss.showErrors": true
+}
