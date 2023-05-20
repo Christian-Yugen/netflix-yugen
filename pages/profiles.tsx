@@ -1,7 +1,8 @@
 import { getSession } from 'next-auth/react';
 import { useRouter } from 'next/router';
 import { NextPageContext } from 'next';
-import useCurrentUser from '@hooks/useCurrentUser';
+import useCurrentUser from '@/hooks/useCurrentUser';
+import Image from 'next/image';
 
 
 export async function getServerSideProps(context: NextPageContext) {
@@ -28,11 +29,11 @@ const Profiles = () => {
     return (
         <div className="flex items-center h-full justify-center">
             <div className="flex flex-col">
-                <h1 className="text-3xl md: text-5xl text-white text-center">O que você está assistindo?</h1>
+                <h1 className="text-3xl md:text-5xl text-white text-center">O que você está assistindo?</h1>
                 <div className="flex items-center justify-center gap-8 mt-10">
                     <div onClick={() => router.push('/')}>
 
-                        <div className="grup flex-row w-44 mx-auto">
+                        <div className="group flex-row w-44 mx-auto">
                             <div className="
                                 w-44
                                 h-44
@@ -45,7 +46,7 @@ const Profiles = () => {
                                 group-hover:border-white
                                 overflow-hidden 
                             ">
-                            <img src="/images/" alt="Profile" />
+                            <Image src="/images/" alt="Profile" />
                             </div>
                             <div
                                 className="
@@ -53,7 +54,7 @@ const Profiles = () => {
                                     text-gray-400
                                     text-2xl
                                     text-center
-                                    group-houver:text-white
+                                    group-hover:text-white
                                 "                            
                             >
                                 {user?.name}
