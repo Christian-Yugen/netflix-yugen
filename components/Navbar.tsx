@@ -1,4 +1,5 @@
 import NavbarItem from "./NavbarItem";
+import Image from 'next/image';
 
 const Navbar = () => {
     return (
@@ -16,7 +17,7 @@ const Navbar = () => {
                 bg-opacity-90
                 "
             >
-                <img className="h-4 lg:h-7" src="/images/netflix_Logo_RGB.png" alt="Logo" />
+                <Image className="h-4 lg:h-7" src="/images/netflix_Logo_RGB.png" alt="Logo" />
                 <div
                     className="
                         flex-row
