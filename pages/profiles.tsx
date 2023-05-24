@@ -29,7 +29,7 @@ const Profiles = () => {
     return (
         <div className="flex items-center h-full justify-center">
             <div className="flex flex-col">
-                <h1 className="text-3xl md:text-5xl text-white text-center">O que você está assistindo?</h1>
+                <h1 className="text-3xl md:text-5xl text-white text-center">Quem está assistindo?</h1>
                 <div className="flex items-center justify-center gap-8 mt-10">
                     <div onClick={() => router.push('/')}>
 
@@ -46,7 +46,7 @@ const Profiles = () => {
                                 group-hover:border-white
                                 overflow-hidden 
                             ">
-                            <Image src="/images/Netflix-avatar.png" alt="Profile" />
+                            <Image  src="/images/Netflix-avatar.png" alt="Profile" />
                             </div>
                             <div
                                 className="
