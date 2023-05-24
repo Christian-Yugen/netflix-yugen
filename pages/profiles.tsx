@@ -46,7 +46,7 @@ const Profiles = () => {
                                 group-hover:border-white
                                 overflow-hidden 
                             ">
-                            <Image src="/images/" alt="Profile" />
+                            <Image src="/images/Netflix-avatar.png" alt="Profile" />
                             </div>
                             <div
                                 className="
