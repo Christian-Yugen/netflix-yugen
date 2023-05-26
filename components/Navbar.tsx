@@ -9,7 +9,7 @@ const Navbar = () => {
 
     const toggleMobileMenu = useCallback(() => {
         setShowMobileMenu((current) => !current);
-;    }, []);
+    }, []);
 
     return (
         <nav className="w-full fixed z-40">
@@ -25,7 +25,7 @@ const Navbar = () => {
                 bg-zinc-900
                 bg-opacity-90
                 "
-            >
+              >
                 <Image className="h-4 lg:h-7" src="/images/netflix_Logo_RGB.png" alt="Logo" />
                 <div
                     className="
@@ -42,10 +42,10 @@ const Navbar = () => {
                     <NavbarItem label="Minha lista" />
                     <NavbarItem label="Linguagem" />
                 </div>
-                <div onClick={toggleMobileMenu} className="lg:hidden flex flex-row items-center gap-2 ml-8 cursor-pointer relative">
+                <div onClick={ toggleMobileMenu } className="lg:hidden flex flex-row items-center gap-2 ml-8 cursor-pointer relative">
                     <p className="text-white text-sm">Browser</p>
                     <BsChevronDown className="text-white transition" />
-                    <MobileMenu visible={showMobileMenu} />
+                    <MobileMenu visible={ showMobileMenu } />
                 </div>
             </div>
         </nav>
